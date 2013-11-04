@@ -13,12 +13,30 @@
 </tr>
 </table>
 
+<script>
+	function setWinner(Integer win){
+		alert("Player " + win + " wins!");
+	}
+	function setMoveByPlayerID(Integer i, String[] moves){
+		alert(playerNames[i] + " " + moves[i]); 
+	}
+	function printPlayers(String s){
+		alert(s);	
+	}
+	function setScoreByPlayerID(Integer i, String[] scores){
+		alert(playerNames[i]);
+		alert(" ");
+		alert(scores[i]);
+	}
+</script>
+
 <select id="choices">
   <option value="rock">Rock</option>
   <option value="paper">Paper</option>
   <option value="scissors">Scissors</option>
   <option value="lizard">Lizard</option>
-   <option value="spock">Spock</option>
+  <option value="spock">Spock</option>
+  <element onChange="gameClient.sendMove(optionValue)">
 </select>
 
 </body>
